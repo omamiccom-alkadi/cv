@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdelrahman Alkadi — Full-Stack Developer & Tech Lead</title>
+  <title>Abdelrahman Alkadi — Full-Stack Developer & Automation Architect</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -201,21 +201,9 @@
       transition: border-color .2s, transform .2s;
     }
     .skill-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .skill-card-icon {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-    }
-    .skill-card-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
+    .skill-card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .skill-card-title { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
     .skill-tag {
       background: rgba(0,122,255,0.1);
       border: 1px solid rgba(0,122,255,0.25);
@@ -225,186 +213,113 @@
       color: #7EC8FF;
       font-weight: 500;
     }
-    .skill-tag.teal {
-      background: rgba(0,210,190,0.1);
-      border-color: rgba(0,210,190,0.25);
-      color: var(--accent2);
+    .skill-tag.teal { background: rgba(0,210,190,0.1); border-color: rgba(0,210,190,0.25); color: var(--accent2); }
+    .skill-tag.gold { background: rgba(255,196,0,0.1); border-color: rgba(255,196,0,0.25); color: var(--gold); }
+    .skill-tag.purple { background: rgba(168,85,247,0.1); border-color: rgba(168,85,247,0.25); color: #d8b4fe; }
+
+    /* ── CASE STUDY (AUTOMATION) ── */
+    .case-card {
+      background: linear-gradient(180deg, var(--card) 0%, rgba(17,24,39,0.4) 100%);
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,122,255,0.08);
+      position: relative;
+      overflow: hidden;
     }
-    .skill-tag.gold {
-      background: rgba(255,196,0,0.1);
-      border-color: rgba(255,196,0,0.25);
-      color: var(--gold);
+    .case-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
     }
+    .metrics-row { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .metric-box {
+      background: rgba(0,122,255,0.05); border: 1px solid rgba(0,122,255,0.15);
+      border-radius: 12px; padding: 16px; flex: 1; min-width: 120px; text-align: center;
+    }
+    .metric-value { font-size: 1.8rem; font-weight: 800; color: var(--accent2); margin-bottom: 4px; line-height: 1.2; }
+    .metric-label { font-size: 0.75rem; color: var(--light); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .phase-list { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .phase-item {
+      background: rgba(255,255,255,0.02);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+    }
+    .phase-title { font-weight: 700; color: var(--white); margin-bottom: 6px; font-size: 0.95rem; }
+    .phase-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .doc-box {
+      background: rgba(255,196,0,0.08); border-left: 3px solid var(--gold);
+      padding: 16px 20px; margin-top: 24px; border-radius: 0 8px 8px 0;
+      font-size: 0.85rem; color: var(--text); line-height: 1.6;
+    }
+    .doc-box strong { color: var(--gold); }
 
     /* ── EXPERIENCE ── */
     .timeline { position: relative; padding-left: 28px; }
     .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 8px; bottom: 8px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent), var(--accent2));
-      border-radius: 1px;
+      content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2)); border-radius: 1px;
     }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 36px;
-    }
+    .timeline-item { position: relative; margin-bottom: 36px; }
     .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -34px; top: 6px;
-      width: 12px; height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 2px solid var(--bg);
+      content: ''; position: absolute; left: -34px; top: 6px; width: 12px; height: 12px;
+      border-radius: 50%; background: var(--accent); border: 2px solid var(--bg);
       box-shadow: 0 0 0 3px rgba(0,122,255,0.3);
     }
     .timeline-item:first-child::before { background: var(--accent2); box-shadow: 0 0 0 3px rgba(0,210,190,0.3); }
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-    .exp-role {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-    }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+    .exp-role { font-size: 1rem; font-weight: 700; color: var(--white); }
     .exp-date {
-      font-size: 0.78rem;
-      color: var(--accent2);
-      font-weight: 600;
-      background: rgba(0,210,190,0.1);
-      border: 1px solid rgba(0,210,190,0.25);
-      border-radius: 999px;
-      padding: 2px 12px;
-      white-space: nowrap;
+      font-size: 0.78rem; color: var(--accent2); font-weight: 600;
+      background: rgba(0,210,190,0.1); border: 1px solid rgba(0,210,190,0.25);
+      border-radius: 999px; padding: 2px 12px; white-space: nowrap;
     }
-    .exp-company {
-      font-size: 0.88rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .exp-desc {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .exp-company { font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+    .exp-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
     /* ── PROJECTS ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-    }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
     .project-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      transition: border-color .2s, transform .2s;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+      transition: border-color .2s, transform .2s; display: flex; flex-direction: column; gap: 12px;
     }
     .project-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
     .project-icon {
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-      background: rgba(0,122,255,0.12);
-      border: 1px solid rgba(0,122,255,0.2);
+      width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; background: rgba(0,122,255,0.12); border: 1px solid rgba(0,122,255,0.2);
     }
-    .project-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .project-url {
-      font-size: 0.78rem;
-      color: var(--accent2);
-      text-decoration: none;
-    }
+    .project-name { font-size: 1rem; font-weight: 700; color: var(--white); }
+    .project-url { font-size: 0.78rem; color: var(--accent2); text-decoration: none; }
     .project-url:hover { text-decoration: underline; }
-    .project-desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.65;
-      flex: 1;
-    }
+    .project-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; flex: 1; }
 
     /* ── EDUCATION & CERTS ── */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
     .edu-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      transition: border-color .2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px;
+      display: flex; gap: 14px; align-items: flex-start; transition: border-color .2s;
     }
     .edu-card:hover { border-color: var(--gold); }
-    .edu-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .edu-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .edu-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .edu-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .edu-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .edu-sub { font-size: 0.78rem; color: var(--muted); }
 
     /* ── LANGUAGES ── */
-    .lang-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+    .lang-row { display: flex; flex-wrap: wrap; gap: 16px; }
     .lang-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 200px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 24px;
+      display: flex; align-items: center; gap: 12px; min-width: 200px;
     }
     .lang-flag { font-size: 1.8rem; }
     .lang-name { font-weight: 700; color: var(--white); font-size: 0.95rem; }
     .lang-level { font-size: 0.78rem; color: var(--accent2); }
 
     /* ── VALUES ── */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
-    }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
     .value-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
-      text-align: center;
-      transition: border-color .2s, transform .2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px;
+      text-align: center; transition: border-color .2s, transform .2s;
     }
     .value-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
     .value-icon { font-size: 2rem; margin-bottom: 10px; }
@@ -412,32 +327,14 @@
     .value-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      padding: 36px 24px;
-      text-align: center;
-    }
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 36px 24px; text-align: center; }
     .footer-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 12px 32px;
-      border-radius: 999px;
-      text-decoration: none;
-      margin-bottom: 20px;
-      transition: opacity .2s;
+      display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #fff; font-weight: 700; font-size: 0.95rem; padding: 12px 32px; border-radius: 999px; text-decoration: none;
+      margin-bottom: 20px; transition: opacity .2s;
     }
     .footer-cta:hover { opacity: 0.88; }
-    .footer-info {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 2;
-    }
+    .footer-info { font-size: 0.82rem; color: var(--muted); line-height: 2; }
     .footer-info a { color: var(--accent2); text-decoration: none; }
     .footer-info a:hover { text-decoration: underline; }
 
@@ -446,6 +343,7 @@
       .hero-name { font-size: 1.9rem; }
       .section-title { font-size: 1.35rem; }
       .exp-header { flex-direction: column; }
+      .case-card { padding: 20px; }
     }
   </style>
 </head>
@@ -469,7 +367,7 @@
     </div>
 
     <h1 class="hero-name">Abdelrahman Alkadi</h1>
-    <p class="hero-title">Full-Stack Developer &amp; Tech Lead</p>
+    <p class="hero-title">Full-Stack Developer &amp; Automation Architect</p>
 
     <div class="hero-location">
       📍 &nbsp;Beni Suef, Egypt &nbsp;|&nbsp; Open to Saudi Arabia (Remote / On-site)
@@ -477,10 +375,10 @@
 
     <div class="hero-badges">
       <span class="badge accent">5+ Years Experience</span>
-      <span class="badge accent2">20+ Projects Delivered</span>
+      <span class="badge accent2">Make.com Automation</span>
+      <span class="badge">AI API Integration</span>
       <span class="badge">Laravel Expert</span>
       <span class="badge">WordPress Specialist</span>
-      <span class="badge">SEO &amp; Google Ads</span>
       <span class="badge">ERP Systems</span>
       <span class="badge accent">React &amp; Flutter</span>
     </div>
@@ -510,13 +408,9 @@
     <p class="section-label">About</p>
     <h2 class="section-title">Who I Am</h2>
     <p class="about-text">
-      I'm a <strong>Full-Stack Developer</strong> with 5+ years of experience building scalable web applications,
-      mobile apps, and digital solutions for clients across <strong>Saudi Arabia</strong> and Egypt.
-      My expertise spans the full development lifecycle — from back-end architecture using
-      <strong>Laravel, Node.js, and Python</strong>, to front-end development with <strong>React.js and Vue.js</strong>,
-      to cross-platform mobile apps with <strong>React Native and Flutter</strong>.
-      I combine deep technical skill with a strong marketing mindset — delivering not just code,
-      but complete digital solutions with measurable business impact.
+      I'm a <strong>Full-Stack Developer and Automation Architect</strong> with 5+ years of experience building scalable web applications, mobile apps, and revenue-generating digital solutions for clients across <strong>Saudi Arabia</strong> and Egypt.
+      My expertise spans the full lifecycle — from back-end architecture using <strong>Laravel, Node.js, and Python</strong>, to AI API Integrations, to cross-platform apps with <strong>React Native and Flutter</strong>.
+      I combine deep technical skill with a strong business mindset — delivering not just code, but fully automated solutions with measurable impact.
     </p>
   </div>
 </section>
@@ -530,18 +424,27 @@
     <h2 class="section-title">Technical Expertise</h2>
     <div class="skills-grid">
 
+      <div class="skill-card" style="border-color: var(--accent2);">
+        <div class="skill-card-icon">🤖</div>
+        <div class="skill-card-title">Automation &amp; AI Integration</div>
+        <div class="skill-tags">
+          <span class="skill-tag purple">Make.com</span>
+          <span class="skill-tag purple">OpenAI API</span>
+          <span class="skill-tag purple">Leonardo.Ai API</span>
+          <span class="skill-tag purple">Salla Webhooks</span>
+          <span class="skill-tag purple">PDFShift</span>
+        </div>
+      </div>
+
       <div class="skill-card">
         <div class="skill-card-icon">🖥️</div>
         <div class="skill-card-title">Front-End Development</div>
         <div class="skill-tags">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">HTML5 / CSS3</span>
           <span class="skill-tag">JavaScript ES6+</span>
           <span class="skill-tag">React.js</span>
           <span class="skill-tag">Vue.js</span>
           <span class="skill-tag">TailwindCSS</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">jQuery</span>
         </div>
       </div>
 
@@ -553,7 +456,6 @@
           <span class="skill-tag">PHP</span>
           <span class="skill-tag">Node.js</span>
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">Express.js</span>
           <span class="skill-tag">REST APIs</span>
         </div>
       </div>
@@ -570,16 +472,6 @@
       </div>
 
       <div class="skill-card">
-        <div class="skill-card-icon">🗄️</div>
-        <div class="skill-card-title">Databases</div>
-        <div class="skill-tags">
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">PostgreSQL</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
         <div class="skill-card-icon">🌐</div>
         <div class="skill-card-title">WordPress &amp; E-Commerce</div>
         <div class="skill-tags">
@@ -587,58 +479,73 @@
           <span class="skill-tag">WooCommerce</span>
           <span class="skill-tag">Custom Themes</span>
           <span class="skill-tag">Custom Plugins</span>
-          <span class="skill-tag">Multi-Vendor</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-icon">📈</div>
-        <div class="skill-card-title">SEO &amp; Digital Marketing</div>
-        <div class="skill-tags">
-          <span class="skill-tag teal">SEO</span>
-          <span class="skill-tag teal">Google Ads</span>
-          <span class="skill-tag teal">Facebook Ads</span>
-          <span class="skill-tag teal">Google Analytics</span>
-          <span class="skill-tag teal">SEMrush</span>
-          <span class="skill-tag teal">Ahrefs</span>
         </div>
       </div>
 
       <div class="skill-card">
         <div class="skill-card-icon">🏢</div>
-        <div class="skill-card-title">ERP &amp; Accounting Systems</div>
+        <div class="skill-card-title">ERP &amp; Payment Systems</div>
         <div class="skill-tags">
           <span class="skill-tag gold">ERP Systems</span>
-          <span class="skill-tag gold">ZATCA Compliance</span>
-          <span class="skill-tag gold">Financial Dashboards</span>
-          <span class="skill-tag gold">Business Automation</span>
+          <span class="skill-tag gold">ZATCA</span>
+          <span class="skill-tag gold">Tabby / Tamara</span>
+          <span class="skill-tag gold">Moyasar / PayPal</span>
         </div>
       </div>
 
-      <div class="skill-card">
-        <div class="skill-card-icon">💳</div>
-        <div class="skill-card-title">Payment Gateways</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Tabby</span>
-          <span class="skill-tag">Tamara</span>
-          <span class="skill-tag">Moyasar</span>
-          <span class="skill-tag">Tap</span>
-          <span class="skill-tag">PayPal</span>
-          <span class="skill-tag">BNPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CASE STUDY: AUTOMATION ARCHITECTURE
+════════════════════════════════════════════════════ -->
+<section id="automation-architecture">
+  <div class="container">
+    <p class="section-label">High-Ticket Capability</p>
+    <h2 class="section-title">Production Automation Architecture</h2>
+    
+    <div class="case-card">
+      <h3 style="color: var(--white); font-size: 1.4rem; margin-bottom: 8px;">"Zero-Inventory" AI Story Engine</h3>
+      <p style="color: var(--accent2); font-weight: 600; margin-bottom: 24px; font-size: 0.95rem;">Client: Vito Gifts &nbsp;|&nbsp; Role: Architect &amp; Builder</p>
+
+      <div class="metrics-row">
+        <div class="metric-box">
+          <div class="metric-value">5 Mins</div>
+          <div class="metric-label">Fulfillment Time</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-value">0%</div>
+          <div class="metric-label">Human Intervention</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">Automated Pipeline</div>
         </div>
       </div>
 
-      <div class="skill-card">
-        <div class="skill-card-icon">🎨</div>
-        <div class="skill-card-title">UI/UX &amp; Design</div>
-        <div class="skill-tags">
-          <span class="skill-tag teal">Figma</span>
-          <span class="skill-tag teal">Adobe XD</span>
-          <span class="skill-tag teal">UI Design</span>
-          <span class="skill-tag teal">Brand Identity</span>
+      <p class="about-text" style="margin-bottom: 24px; max-width: 100%;">
+        <strong>Project Genesis:</strong> Conceptualized and executed a highly profitable "Zero-Inventory" digital product model. Built a fully automated, revenue-generating SaaS infrastructure entirely on Make.com. The system listens for e-commerce orders, generates dynamically illustrated personalized storybooks using dual-AI logic (LLMs + Diffusion Models), compiles them to print-ready PDFs, and delivers them directly to the customer.
+      </p>
+
+      <div class="phase-list">
+        <div class="phase-item">
+          <div class="phase-title">Phase 1: Order Ingestion &amp; Hero Identity Generation</div>
+          <div class="phase-desc">Custom Webhook captures Salla e-commerce JSON payloads. GPT-4o-mini parses child attributes and outputs strict English visual prompt constraints to prevent AI hallucination and ensure character consistency.</div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-title">Phase 2: Dual-Mind AI &amp; Cinematic Rendering</div>
+          <div class="phase-desc">A structured system prompt forces the LLM to act as "Storyteller" (Arabic text) and "Cinematographer" (English prompts). Make.com Iterator sends scenes to Leonardo.Ai dynamically with strict negative prompting for a "Pixar Up" aesthetic.</div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-title">Phase 3: Compilation, Formatting &amp; Delivery</div>
+          <div class="phase-desc">Master JSON is mapped into print-ready HTML/CSS, converted to high-fidelity PDF via PDFShift API, uploaded to Drive, and delivered via Gmail API with signed URLs.</div>
         </div>
       </div>
 
+      <div class="doc-box">
+        <strong>Self-QA &amp; Error Handling:</strong> Implemented Break/Ignore directives and strategic Sleep functions (10-30s) within iteration loops to respect API rate limits. This robust logic prevents timeout errors during high-volume launch seasons, ensuring 95%+ server uptime.
+      </div>
     </div>
   </div>
 </section>
@@ -651,6 +558,15 @@
     <p class="section-label">Experience</p>
     <h2 class="section-title">Work History</h2>
     <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="exp-header">
+          <span class="exp-role">Automation Architect &amp; AI Integrator</span>
+          <span class="exp-date">2024 – Present</span>
+        </div>
+        <div class="exp-company">Vito Gifts (Project Basis)</div>
+        <p class="exp-desc">Architected and built a "Zero-Inventory" AI Story Engine using Make.com, OpenAI, and Leonardo.Ai. Achieved 100% automated order fulfillment from Salla e-commerce webhooks to finalized PDF email delivery.</p>
+      </div>
 
       <div class="timeline-item">
         <div class="exp-header">
@@ -676,52 +592,25 @@
           <span class="exp-date">Mar 2021 – Present</span>
         </div>
         <div class="exp-company">Arkan Economic Consulting</div>
-        <p class="exp-desc">Managed the company's digital infrastructure as the primary IT specialist. Revamped the main corporate website "Khubara", resolved a critical Google security flag (malware removal, SSL implementation, Search Console cleanup), and restored suspended Google Ads campaigns within 48 hours. Managed IT hardware including CCTV systems, printers, and biometric devices, while training staff on internal systems.</p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="exp-header">
-          <span class="exp-role">WordPress Developer &amp; Lead Programmer</span>
-          <span class="exp-date">Previous</span>
-        </div>
-        <div class="exp-company">Scale Up</div>
-        <p class="exp-desc">Managed project lifecycles and implemented digital marketing strategies to drive growth and user acquisition.</p>
+        <p class="exp-desc">Managed digital infrastructure, revamped the corporate website, resolved critical Google security flags (malware removal), and managed IT hardware and biometric devices.</p>
       </div>
 
       <div class="timeline-item">
         <div class="exp-header">
           <span class="exp-role">Lead Programmer</span>
-          <span class="exp-date">Previous</span>
+          <span class="exp-date">Previous Roles</span>
         </div>
-        <div class="exp-company">Launchly</div>
-        <p class="exp-desc">Directed programming teams and built robust API interfaces to support platform scalability.</p>
+        <div class="exp-company">Scale Up &amp; Launchly</div>
+        <p class="exp-desc">Directed programming teams, built robust API interfaces, managed project lifecycles, and implemented digital marketing strategies to drive growth.</p>
       </div>
 
       <div class="timeline-item">
         <div class="exp-header">
           <span class="exp-role">WordPress Developer &amp; SEO Specialist</span>
-          <span class="exp-date">Previous</span>
+          <span class="exp-date">Previous Roles</span>
         </div>
-        <div class="exp-company">Malikalriyadh</div>
-        <p class="exp-desc">Optimized website performance and achieved first-page Google rankings for targeted keywords in the Saudi market.</p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="exp-header">
-          <span class="exp-role">WordPress Developer, SEO &amp; Digital Marketer</span>
-          <span class="exp-date">Previous</span>
-        </div>
-        <div class="exp-company">Star Fab (starfab.sa)</div>
-        <p class="exp-desc">Managed complete digital presence, achieving first-page Google rankings for all targeted keywords through comprehensive SEO strategy.</p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="exp-header">
-          <span class="exp-role">WordPress Designer &amp; SEO Specialist</span>
-          <span class="exp-date">Previous</span>
-        </div>
-        <div class="exp-company">Valu</div>
-        <p class="exp-desc">Designed and optimized WordPress websites with a focus on user experience and search engine visibility.</p>
+        <div class="exp-company">Malikalriyadh, Star Fab, Valu</div>
+        <p class="exp-desc">Optimized website performance and achieved first-page Google rankings for targeted keywords in the Saudi market through comprehensive SEO strategies.</p>
       </div>
 
     </div>
@@ -736,6 +625,15 @@
     <p class="section-label">Projects</p>
     <h2 class="section-title">Notable Work</h2>
     <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🎁</div>
+        <div>
+          <div class="project-name">AI Story Engine</div>
+          <span class="project-url" style="color: var(--muted); cursor: default;">Internal SaaS Tool</span>
+        </div>
+        <p class="project-desc">Fully automated pipeline (Make.com + Salla) generating personalized, AI-illustrated storybooks via LLMs and Diffusion Models without human intervention.</p>
+      </div>
 
       <div class="project-card">
         <div class="project-icon">🏥</div>
@@ -771,15 +669,6 @@
           <a class="project-url" href="https://starfab.sa" target="_blank">starfab.sa</a>
         </div>
         <p class="project-desc">Service website optimized to achieve first-page Google rankings for all targeted keywords through comprehensive SEO strategy.</p>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon">📚</div>
-        <div>
-          <div class="project-name">EdTech SaaS Platform</div>
-          <a class="project-url" href="#">In Development</a>
-        </div>
-        <p class="project-desc">Specialized SaaS platform for the Egyptian education market, designed to serve teachers and students with modern learning tools.</p>
       </div>
 
     </div>
@@ -867,14 +756,6 @@
         </div>
       </div>
 
-      <div class="edu-card">
-        <div class="edu-icon">🏆</div>
-        <div>
-          <div class="edu-title">Multiple Certifications</div>
-          <div class="edu-sub">Udemy &nbsp;•&nbsp; WordPress, SEO Mastery, Affiliate Marketing, Web Security</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -956,7 +837,7 @@
       <div>📞 &nbsp;<a href="tel:+201033636627">+20 103 363 6627</a></div>
       <div>🔗 &nbsp;<a href="https://linkedin.com/in/abdelrahman-alkadi" target="_blank">linkedin.com/in/abdelrahman-alkadi</a></div>
       <div style="margin-top:16px; color:#3d4f6e; font-size:0.78rem;">
-        © 2025 Abdelrahman Alkadi — Full-Stack Developer &amp; Tech Lead
+        © 2025 Abdelrahman Alkadi — Full-Stack Developer &amp; Automation Architect
       </div>
     </div>
   </div>
